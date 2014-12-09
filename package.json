@@ -1,0 +1,25 @@
+{
+  "name": "interview",
+  "version": "0.0.0",
+  "description": "InterviewQuestions ==================",
+  "main": "index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumiata/InterviewQuestions.git"
+  },
+  "author": "Thomas W. Watson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lumiata/InterviewQuestions/issues"
+  },
+  "homepage": "https://github.com/lumiata/InterviewQuestions",
+  "dependencies": {
+    "karma": "^0.12.28"
+  }
+}
