@@ -1,4 +1,6 @@
-define(['./BinaryHeap'],function(BinaryHeap){
+define(function (require, exports, module) {
+    var BinaryHeap = require('./BinaryHeap');
+
    var Dijkstras =  function (graphObject) {
         var graph = graphObject;
 
@@ -13,6 +15,7 @@ define(['./BinaryHeap'],function(BinaryHeap){
 
         //add all nodes to heap
         for (var node in graph) {
+            graph[node].score = Number.MAX_VALUE;
             scoreHeap.push(node);
         }
 
@@ -58,17 +61,17 @@ define(['./BinaryHeap'],function(BinaryHeap){
 
             while(shortestPathNode != start){
                 var previousNode = shortestPath[shortestPathNode];
-                path += ' ' + previousNode;
+                path = previousNode + ' ' + path;
                 shortestPathNode = previousNode;
             }
 
             return [shortestDistance[end], path];
-        }
+        };
 
         return {
             calc: calculate
         };
-    }
+    };
 
-    return Dijkstras;
+    module.exports = Dijkstras;
 });

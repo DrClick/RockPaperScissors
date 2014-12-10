@@ -1,43 +1,13 @@
 
 <!DOCTYPE html >
 <head>
-   <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
-   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-   <script type="text/javascript" src="BinaryHeap.js"></script>
-   <script type="text/javascript" src="dijkstras.js"></script>
-<body ng-app="myApp">
+    <script type="text/javascript" src="lib/requirejs/require.js" data-main="src/requireConfig.js"></script>
+<body>
 <div ng-controller="dynamicDataController">
    <h1>Welcome {{foo}} to your Lumiata Interview</h1>
    <interview-directive/>
+    <div>{{result[0]}}</div>
+    <div>{{result[1]}}</div>
 </div>
-<script type="text/javascript">
-   var app = angular.module('myApp', []);
-   app.controller('dynamicDataController', function ($scope) {
-       
-      $scope.foo = 'bar';
 
-
-   });
-   app.directive('interviewDirective', function () {
-       return {
-           template: '<input value="{{foo}}">'
-       }
-   });
-
-</script>
-<script>
-var graph = {
-  0: {edges: {4: 14, 5: 9, 1: 7}, score: Number.MAX_VALUE},
-  1: {edges: {0: 7, 5: 8, 2: 15}, score: Number.MAX_VALUE},
-  2: {edges: {1: 15, 5: 6, 3: 4}, score: Number.MAX_VALUE},
-  3: {edges: {2: 4, 4: 9}, score: Number.MAX_VALUE},
-  4: {edges: {3: 9, 0: 14, 5: 2}, score: Number.MAX_VALUE},
-  5: {edges: {0: 9, 1: 8, 2: 6, 4: 2}, score: Number.MAX_VALUE},
-};
-
-var algo = new Dijkstras(graph);
-console.log(algo.calc(0,3));
-
-
-</script>
 </body>

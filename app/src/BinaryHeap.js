@@ -1,4 +1,4 @@
-define([], function () {
+define(function (require, exports, module) {
 
 
     function BinaryHeap(scoreFunction) {
@@ -114,7 +114,7 @@ define([], function () {
         }
     };
 
-    return BinaryHeap;
+    module.exports = BinaryHeap;
 });
 
 
