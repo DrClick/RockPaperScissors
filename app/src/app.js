@@ -21,9 +21,6 @@ define(function (require, exports, module) {
         var algo = new Dijkstras(graph);
         $scope.result = algo.calc(0,4);
 
-        debugger
-
-
     });
     app.directive('interviewDirective', function () {
         return {
