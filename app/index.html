@@ -1,13 +1,15 @@
-
 <!DOCTYPE html >
 <head>
-    <script type="text/javascript" src="lib/requirejs/require.js" data-main="src/requireConfig.js"></script>
+    <script type="text/javascript" src="lib/requirejs/require.js"
+            data-main="src/requireConfig.js"></script>
+    <base href="/">
+</head>
+
 <body>
-<div ng-controller="dynamicDataController">
-   <h1>Welcome {{foo}} to your Lumiata Interview</h1>
-   <interview-directive/>
-    <div>{{result[0]}}</div>
-    <div>{{result[1]}}</div>
+<div ui-view="main"></div>
+<div ui-view="nav">
+    <hr/>
+    <a ui-sref="library">Library</a>
 </div>
 
-</body>
+</body></html>

@@ -4,13 +4,22 @@ require.config({
         angular: {
             exports: 'angular'
         },
-        underscore: {
+        lodash: {
             exports: '_'
-        }
+        },
+        'angular-ui-router': [
+            'angular'
+        ],
+        'angular-route': [
+            'angular'
+        ]
     },
     paths: {
         angular: '../lib/angular/angular',
-        underscore: '../lib/underscore/underscore'
+        lodash: '../lib/lodash/dist/lodash',
+        'angular-ui-router': '../lib/angular-ui-router/release/angular-ui-router',
+        'angular-route': '../lib/angular-route/angular-route'
+
     },
     packages: [
 

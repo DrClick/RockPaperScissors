@@ -3,6 +3,7 @@ define(function(require, exports, module) {
     var angular = require('angular');
     require('./app');
 
+
     angular.bootstrap(document, ['app']);
 
 });
