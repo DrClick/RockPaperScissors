@@ -1,5 +1,5 @@
-define(function (require, exports, module) {
-
+define(function(require, exports, module) {
+    'use strict';
 
     function BinaryHeap(scoreFunction) {
         this.content = [];
@@ -7,14 +7,14 @@ define(function (require, exports, module) {
     }
 
     BinaryHeap.prototype = {
-        push: function (element) {
+        push: function(element) {
             // Add the new element to the end of the array.
             this.content.push(element);
             // Allow it to bubble up.
             this.bubbleUp(this.content.length - 1);
         },
 
-        pop: function () {
+        pop: function() {
             // Store the first element so we can return it later.
             var result = this.content[0];
             // Get the element at the end of the array.
@@ -28,7 +28,7 @@ define(function (require, exports, module) {
             return result;
         },
 
-        remove: function (node) {
+        remove: function(node) {
             var length = this.content.length;
             // To remove a value, we must search through the array to find
             // it.
@@ -49,13 +49,14 @@ define(function (require, exports, module) {
             }
         },
 
-        size: function () {
+        size: function() {
             return this.content.length;
         },
 
-        bubbleUp: function (n) {
+        bubbleUp: function(n) {
             // Fetch the element that has to be moved.
-            var element = this.content[n], score = this.scoreFunction(element);
+            var element = this.content[n],
+                score = this.scoreFunction(element);
             // When at 0, an element can not go up any further.
             while (n > 0) {
                 // Compute the parent element's index, and fetch it.
@@ -74,13 +75,14 @@ define(function (require, exports, module) {
             }
         },
 
-        sinkDown: function (n) {
+        sinkDown: function(n) {
             // Look up the target element and its score.
             var length = this.content.length,
                 element = this.content[n],
-                elemScore = this.scoreFunction(element);
+                elemScore = this.scoreFunction(element),
+                isDone = false;
 
-            while (true) {
+            while (!isDone) {
                 // Compute the indices of the child elements.
                 var child2N = (n + 1) * 2, child1N = child2N - 1;
                 // This is used to store the new position of the element,
@@ -104,7 +106,10 @@ define(function (require, exports, module) {
                 }
 
                 // No need to swap further, we are done.
-                if (swap == null) break;
+                if (swap == null) {
+                    isDone = true;
+                    break;
+                }
 
                 // Otherwise, swap and continue.
                 this.content[n] = this.content[swap];
@@ -116,6 +121,3 @@ define(function (require, exports, module) {
 
     module.exports = BinaryHeap;
 });
-
-
-

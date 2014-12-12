@@ -5,7 +5,6 @@
   "requireRightStickedOperators": ["!"],
   "requireLeftStickedOperators": [","],
   "disallowKeywords": ["with"],
-  "disallowMultipleLineBreaks": true,
   "requireBlocksOnNewline": true,
   "disallowMixedSpacesAndTabs": true,
   "disallowTrailingWhitespace": true,
@@ -21,6 +20,5 @@
     "requireParamTypes": false
   },
   "validateQuoteMarks": "'",
-  "disallowMultipleVarDecl": true,
   "disallowSpacesInsideParentheses": true
 }

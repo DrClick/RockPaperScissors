@@ -1,4 +1,5 @@
-define(function (require, exports, module) {
+define(function(require, exports, module) {
+    'use strict';
     var angular = require('angular');
 
     //application module files
@@ -16,9 +17,6 @@ define(function (require, exports, module) {
     require('angular-scroll');
 
 
-
-
-
     module.exports = angular.module('app', [
         //angular modules
         'duScroll',
@@ -34,5 +32,3 @@ define(function (require, exports, module) {
     ]);
 
 });
-
-

@@ -1,7 +1,7 @@
-define(function (require, exports, module) {
+define(function(require, exports, module) {
     'use strict';
     var libraryModule = require('./module');
-    module.exports = libraryModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    module.exports = libraryModule.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 
         // Now set up the states
@@ -21,6 +21,4 @@ define(function (require, exports, module) {
         // For any unmatched url, redirect to /
         $urlRouterProvider.otherwise('/');
     });
-
-
 });

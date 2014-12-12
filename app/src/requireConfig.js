@@ -52,7 +52,6 @@ require.config({
         'famous-polyfills': '../lib/famous-polyfills/index',
         requirejs: '../lib/requirejs/require',
         'famous-angular': '../lib/famous-angular/dist/famous-angular',
-        'angular-ui-router': '../lib/angular-ui-router/release/angular-ui-router',
         'angular-animate': '../lib/angular-animate/angular-animate',
         'angular-ui-utils': '../lib/angular-ui-utils/ui-utils',
         'angular-scroll': '../lib/angular-scroll/angular-scroll.min',
@@ -60,8 +59,6 @@ require.config({
         d3: '../lib/d3/d3'
 
     },
-    packages: [
-
-    ]
+    packages: []
 });
 require(['../src/main']);
