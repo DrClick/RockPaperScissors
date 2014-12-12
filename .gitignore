@@ -8,3 +8,4 @@ logs/*
 ehthumbs.db
 Icon?
 Thumbs.db
+dist/

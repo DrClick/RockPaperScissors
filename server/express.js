@@ -26,12 +26,12 @@ server.use(_allowCrossDomain);
 
 //serve the angular app
 // serve all asset files from necessary directories
-var pathToApp = __dirname.substr(0,__dirname.length-6) + 'app';
+var pathToApp = __dirname.substr(0,__dirname.length-6) + 'dist';
 
 server.use("/src", express.static(pathToApp + '/src'));
-server.use("/lib", express.static(pathToApp + '/lib'));
+server.use("/css", express.static(pathToApp + '/css'));
+server.use("/styles", express.static(pathToApp + '/css/styles'));
 server.use("/content", express.static(pathToApp + '/content'));
-server.use("/styles", express.static(pathToApp + '/styles'));
 
 // serve index.html for all remaining routes, in order to leave routing up to angular
 server.get("/*", function(req, res, next) {

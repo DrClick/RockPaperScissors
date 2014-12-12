@@ -5,7 +5,7 @@ define(function(require, exports, module) {
     var mod = require('./module');
 
     //bind this controller to the module
-    mod.controller('LibraryController', ['$scope', Controller]);
+    module.exports = mod.controller('LibraryController', ['$scope', Controller]);
 
     function Controller($scope) {
         //mixins the controller into scope,

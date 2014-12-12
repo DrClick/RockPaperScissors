@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
     'use strict';
     var mod = require('./module');
-    module.exports = mod.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    module.exports = mod.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 
         // Now set up the states
@@ -14,5 +14,5 @@ define(function(require, exports, module) {
                 }
             }
         });
-    });
+    }]);
 });

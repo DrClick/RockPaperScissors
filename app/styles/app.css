@@ -1,6 +1,6 @@
 @font-face {
     font-family: "lumiata";
-    src: url(fonts/ProximaNova-Light.woff) format('woff');
+    src: url(/content/fonts/ProximaNova-Light.woff) format('woff');
 }
 
 body {
