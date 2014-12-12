@@ -1,5 +1,5 @@
 define(function (require, exports, module) {
-    var Dijkstras = require('src/Dijkstras');
+    var Dijkstras = require('src/components/Dijkstras');
 
     describe('Unit test: Dijkstras Algo', function(){
         describe('calculate method', function(){
