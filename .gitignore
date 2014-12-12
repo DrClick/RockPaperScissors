@@ -2,3 +2,9 @@ node_modules/
 lib/
 .idea/
 .DS_Store/
+logs/*
+!.gitkeep
+.tmp/*
+ehthumbs.db
+Icon?
+Thumbs.db

@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "lumiata";
+    src: url(fonts/ProximaNova-Light.woff) format('woff');
+}
+
+body {
+    padding-top: 80px;
+    font-family: "lumiata" !important;
+    font-size: 2em;
+}
+
+.background {
+    margin-top: -80px;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 1300px) {
+    .container {
+        width: 90%;
+    }
+}
+
+textarea {
+    min-height: 200px;
+}
+
+/*utility ------------------------*/
+.clear {
+    clear: both;
+}
+
+.none {
+    display: none;
+}
+
+*::-webkit-input-placeholder {
+    /* WebKit browsers */
+    opacity: .6
+}
+
+/*---NG Basic Animation-----*/
+.ng-enter {
+    transition: 1s;
+    opacity: 0;
+}
+
+.ng-enter-active {
+    opacity: 1;
+}
+
+.leave {
+    transition: 1s;
+    opacity: 1;
+}
+
+.ng-leave-active {
+    opacity: 1;
+}
+
+.ellipsis {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.welcome {
+    margin-top: 100px;
+}
+
+.unselectable {
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */;
+}
+
+input, select {
+    font-size: 1em !important;
+}
+
+textarea {
+    font-size: 1em !important;
+    height: 3em !important;
+}
+
+.footer {
+    margin-top: 5em;
+    margin-bottom: 10em;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.main {
+    min-height: 600px;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOutFromFull {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 1;
+    }
+}

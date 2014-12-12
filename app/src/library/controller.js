@@ -17,7 +17,7 @@ define(function(require, exports, module){
 
     function _create(){
         //set up all the properties here
-        this.fooBar = "bar";
+        this.fooBar = "world";
     }
 
     function _init(){

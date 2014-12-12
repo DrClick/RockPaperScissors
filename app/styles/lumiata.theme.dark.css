@@ -1,0 +1,29 @@
+body{
+    background-color: rgba(0,0,0,1);
+    color: rgba(255,255,255,.8);
+}
+a:hover{
+    color: #3cf
+}
+.navbar{
+    background-color: black;
+    border-color: rgba(128,128,128,.5);
+}
+
+input, textarea, select{
+    background-color: rgba(52,52,52,.9)!important;
+    color: rgba(255,255,255,.8)!important;
+    border-color: rgba(52,52,52,1)!important;
+}
+input:focus, textarea:focus{
+    border-color: #428bca!important;
+}
+
+
+hr{
+    border-color: rgba(128,128,128,.5);
+}
+
+h2{
+    color: rgba(128,128,128,.8);
+}

@@ -1,15 +1,76 @@
 <!DOCTYPE html >
 <head>
-    <script type="text/javascript" src="lib/requirejs/require.js"
-            data-main="src/requireConfig.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lumiata</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
+    <style type="text/css">
+        [ng-cloak].splash {
+            display: block !important;
+        }
+
+        .splash {
+            display: none;
+            margin: 10em;
+            text-align: center;
+        }
+    </style>
+    <!-- build:css(app/) css/app.css -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="lib/famous-angular/dist/famous-angular.css">
+    <link rel="stylesheet" href="styles/fonts.css"/>
+    <link rel="stylesheet" href="styles/app.css"/>
+    <link rel="stylesheet" href="styles/scrollee.css"/>
+    <link rel="stylesheet" href="styles/messageBar.css"/>
+    <link rel="stylesheet" href="styles/welcome.css"/>
+    <link rel="stylesheet" href="styles/loading.css"/>
+    <link rel="stylesheet" href="styles/lumiata.theme.dark.css"/>
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js(app/) src/polyfills.js -->
+    <script type="text/javascript" src="lib/famous-polyfills/functionPrototypeBind.js"></script>
+    <script type="text/javascript" src="lib/famous-polyfills/classList.js"></script>
+    <script type="text/javascript" src="lib/famous-polyfills/requestAnimationFrame.js"></script>
+    <script type="text/javascript" src="src/scripts/array.find.polyfill.js"></script>
+    <script type="text/javascript" src="src/scripts/array.findIndex.polyfill.js"></script>
+    <!-- endbuild -->
 </head>
 
 <body>
-<div ui-view="main"></div>
-<div ui-view="nav">
-    <hr/>
-    <a ui-sref="library">Library</a>
-</div>
+<div class="container">
+    <div ui-view="main">
+        <div class="splash" ng-cloak>
+            <h2>Welcome to the Lumiata </h2>
+            <img alt=""
+                 src="data:image/png;base64,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"/>
 
+            <h1>
+                <div class='loading'>
+                    <div class='ball'></div>
+                    <div class='ball'></div>
+                    <div class='ball'></div>
+                    <div class='ball'></div>
+                    <div class='ball'></div>
+                    <div class='ball'></div>
+                    <div class='ball'></div>
+                </div>
+            </h1>
+        </div>
+    </div>
+    <div class="footer">
+        <hr/>
+        © Copyright Lumiata
+    </div>
+</div>
+<div ui-view="messageBar"></div>
+<!-- process:remove:dev -->
+<script type="text/javascript" src="src/main.js"></script>
+<!-- /process -->
+
+<!-- process:remove:dist -->
+<script type="text/javascript" src="lib/requirejs/require.js" data-main="src/requireConfig"></script>
+<!-- /process -->
 </body></html>

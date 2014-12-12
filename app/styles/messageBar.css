@@ -1,0 +1,70 @@
+.messageBar{
+    visibility: hidden;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    color: rgba(250,250,250,.9);
+    line-height: 60px;
+    vertical-align: middle;
+}
+
+.messageBar strong{
+    margin-right: 10px;
+}
+.messageBar.show{
+    visibility: visible;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: fadeInFromNone;
+    -webkit-animation-name: show-messageBar;
+    bottom: 0px;
+}
+
+.messageBar.hide{
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: hide-messageBar;
+    -webkit-animation-name: fadeOutFromFull;
+    visibility: hidden;
+    bottom: -100px;
+}
+
+
+.messageBar .close{
+    font-size: 3em;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+
+.messageBar.error{
+    background-color: rgba(200,0,0,.8);
+}
+.messageBar.info{
+    background-color: rgba(0,0,200,.8);
+}
+.messageBar.success{
+    background-color: rgba(0,200,0,.8);
+}
+
+@-webkit-keyframes hide-messageBar {
+    0% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: -100px;
+    }
+}
+
+@-webkit-keyframes show-messageBar {
+    0% {
+        bottom: -100px;
+        visibility: visible;
+    }
+
+    100% {
+        bottom: 0px;
+        visibility: visible;
+    }
+}
