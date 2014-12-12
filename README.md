@@ -24,12 +24,17 @@
 11. Run unit\e2e tests ```npm test```
 
 ##unit testing
+1. We are using [Jasmine](http://jasmine.github.io/) for unit testing. Your tests belong in ```test\unit\<MODULE_NAME>\*Spec.js```. They must follow the ```*Spec.js naming scheme```
+2. Your services\controllers\filters code must be covered within reason.
 
 ##end to end testing
+1. Your directives must be end to end tested and if you are following best practices, this should be possible as they should be isolated in scope and have all dependencies injectable
 
 ##contributing
 1. First make sure you have read the [javascript style guide](https://github.com/lumiata/javascript). When in doubt, refer to this on issues of style.
 2. If you code contains 3 letter variable names, it will not be going in (Hint!)
-3. To help with code quality be sure your code passes the linting tests
+3. To help with code quality be sure your code passes the linting tests by running ```$ grunt``` from the command line
+4. Test your compiled site by starting the node server, switch to ther server directory and run ```node express.js```. The default port is 7003
+5. When you are ready to submit your pull request, push your feature branch and issue a pull request on develop. We have continuous integration on develop. Your commit messages should be prefixed with the JIRA issue number.
 
 
