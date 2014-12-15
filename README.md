@@ -19,7 +19,7 @@
 6. Switch to this directory and run git remote delete origin ```git remote remove origin```
 7. Add your new repo to the origin ```git remote add origin git@github.com:lumiata/TomsAwesomeProject.git``` (NOTE you need to put in the address of the repo you created in step 5.
 8. Push up this proejct to your repo ```git push origin```
-9. Install the dependencies with ```npm install``` and then ```bower install```
+9. Install the dependencies with ```npm install``` and then ```bower install``` (if asked to choose an angular version, pick 1.3.6)
 10. Start the app! ```grunt serve```
 11. Run unit\e2e tests ```npm test```
 
