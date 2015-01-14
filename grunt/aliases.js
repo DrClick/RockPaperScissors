@@ -7,6 +7,7 @@ module.exports = function (grunt) {
             'processhtml:dev',
             'sass:dev',
             'express:dev',
+            'open:dev',
             'watch'
         ]);
     });

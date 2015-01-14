@@ -1,7 +1,7 @@
 node_modules/
 lib/
 .idea/
-.DS_Store/
+.DS_Store/*
 .DS_Store
 logs/*
 !.gitkeep
@@ -10,3 +10,4 @@ ehthumbs.db
 Icon?
 Thumbs.db
 dist/
+.sass-cache
