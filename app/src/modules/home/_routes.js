@@ -1,6 +1,6 @@
 define(function(require, exports, module) {
     'use strict';
-    var libraryModule = require('./module');
+    var libraryModule = require('./_module');
     module.exports = libraryModule.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 
@@ -9,7 +9,7 @@ define(function(require, exports, module) {
             url: '/',
             views: {
                 'main': {
-                    templateUrl: '../src/home/template.html',
+                    templateUrl: '../src/modules/home/home.template.html',
                     controller: 'HomeController'
                 }
             }

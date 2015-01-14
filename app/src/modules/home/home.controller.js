@@ -2,10 +2,10 @@ define(function(require, exports, module) {
     'use strict';
 
     require('lodash');
-    var mod = require('./module');
+    var mod = require('./_module');
 
     //bind this controller to the module
-    mod.controller('HomeController', ['$scope', '$state', Controller]);
+    mod.controller('HomeController', Controller);
 
     function Controller($scope, $state) {
         //mixins the controller into scope,
@@ -15,10 +15,12 @@ define(function(require, exports, module) {
         _init.call($scope);
     }
 
+    Controller.$inject = ['$scope', '$state'];
+
     function _create(services) {
         //set up all the properties here
         this.services = services;
-        this.rawMessage = 'Welcome to the Lumiata Angular-Famous Seed';
+        this.rawMessage = 'Welcome to Lumiata Angular Seed';
     }
 
     function _init() {

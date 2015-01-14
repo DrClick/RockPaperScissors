@@ -3,8 +3,7 @@ define(function(require, exports, module) {
     var angular = require('angular');
 
     //application module files
-    require('./library/index');
-    require('./home/index');
+    require('./modules/home/_index');
 
 
     //angular dependencies
@@ -27,7 +26,6 @@ define(function(require, exports, module) {
         'famous.angular',
 
         //application modules
-        'app.library',
         'app.home'
     ]);
 

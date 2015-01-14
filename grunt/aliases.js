@@ -2,19 +2,16 @@ module.exports = function (grunt) {
     'use strict';
     grunt.registerTask('serve', function (target) {
 
-
-
-        if (target === 'dist') {
-            return grunt.task.run(['build', 'connect:dist:keepalive']);
-        }
-
         grunt.task.run([
             'clean:server',
             'processhtml:dev',
-            'connect:livereload',
+            'sass:dev',
+            'express:dev',
             'watch'
         ]);
     });
+
+    grunt.registerTask('sass', ['sass:dev']);
 
     grunt.registerTask('build', [
         'clean:dist',
@@ -28,7 +25,8 @@ module.exports = function (grunt) {
         'copy:dist',
         'rev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'sass:dev'
     ]);
 
     grunt.registerTask('lint', [

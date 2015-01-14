@@ -2,6 +2,7 @@ node_modules/
 lib/
 .idea/
 .DS_Store/
+.DS_Store
 logs/*
 !.gitkeep
 .tmp/*
