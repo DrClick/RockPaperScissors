@@ -1,6 +1,6 @@
 module.exports = {
     options: {
-        // Override defaults here
+       debug: true
     },
     dev: {
         options: {

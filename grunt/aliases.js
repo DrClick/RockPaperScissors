@@ -8,7 +8,8 @@ module.exports = function (grunt) {
             'sass:dev',
             'express:dev',
             'open:dev',
-            'watch'
+            'open:inspector',
+            'parallel'
         ]);
     });
 
