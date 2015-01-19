@@ -3,7 +3,7 @@
 var express = require('express');
 var compression = require('compression');
 var bodyParser = require('body-parser');
-var aToB = require('atob')
+var aToB = require('atob');
 var logger = require('./tools/Logger');
 
 
@@ -106,7 +106,7 @@ var pathToApp = __dirname.substr(0, __dirname.length - 6);
 var indexRoot;
 if (process.env.ENV == 'production' || process.env.ENV == 'ready') {
     pathToApp += 'dist';
-    indexRoot = pathToApp
+    indexRoot = pathToApp;
     server.use('/src', express.static(pathToApp + '/src'));
     server.use('/css', express.static(pathToApp + '/css'));
     server.use('/styles', express.static(pathToApp + '/css/styles'));
