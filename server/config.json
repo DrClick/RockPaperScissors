@@ -3,7 +3,7 @@
     "port": 7000,
     "graph": "http://10.10.1.3:11785",
     "autocomplete": "http://10.10.1.3:11785",
-    "medicalCodes": "http://10.10.1.9:8081",
+    "medicalCodes": "http://10.10.1.2:8080",
     "medications": "http://10.10.1.2:8080",
     "mongo": "mongodb://@localhost:27017/lumiata_curation"
   },
@@ -11,7 +11,7 @@
     "port": 8001,
     "graph": "http://10.10.1.9:11785",
     "autocomplete": "http://10.10.1.9:11785",
-    "medicalCodes": "http://10.10.1.9:8081",
+    "medicalCodes": "http://10.10.1.2:8080",
     "medications": "http://10.10.1.2:8080",
     "mongo": "mongodb://@localhost:27017/lumiata_curation"
   },
@@ -19,7 +19,7 @@
     "port": 8001,
     "graph": "10.10.1.9:11785",
     "autocomplete": "10.10.1.9:11785",
-    "medicalCodes": "10.10.1.9:8081",
+    "medicalCodes": "10.10.1.2:8080",
     "medications": "http://10.10.1.2:8080",
     "mongo": "mongodb://@localhost:27017/lumiata_curation"
   },
@@ -27,7 +27,7 @@
     "port": 8000,
     "graph": "10.10.1.9:11785",
     "autocomplete": "10.10.1.9:11785",
-    "medicalCodes": "10.10.1.9:8081",
+    "medicalCodes": "10.10.1.2:8080",
     "medications": "http://10.10.1.2:8080",
     "mongo": "mongodb://@localhost:27017/lumiata_curation"
   }

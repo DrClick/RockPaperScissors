@@ -48,13 +48,6 @@ module.exports = function(grunt) {
             options: {
                 livereload: true
             }
-        },
-        express: {
-            files:  [ 'server/**/**' ],
-            tasks:  [ 'express:dev' ],
-            options: {
-                spawn: false
-            }
         }
     };
 };

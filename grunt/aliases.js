@@ -6,10 +6,10 @@ module.exports = function (grunt) {
             'clean:server',
             'processhtml:dev',
             'sass:dev',
-            'express:dev',
+            'forever:dev',
             'open:dev',
             'open:inspector',
-            'parallel'
+            'parallel:dev'
         ]);
     });
 
@@ -32,8 +32,10 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('lint', [
-        'jscs',
-        'eslint'
+        'jscs:app',
+        'jscs:server',
+        'shell:eslint:app',
+        'shell:eslint:server'
     ]);
 
     grunt.registerTask('test', [
@@ -43,4 +45,24 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'build'
     ]);
+
+    grunt.registerTask('jira', function() {
+        grunt.task.run(['shell:jira']);
+    });
+
+    grunt.registerTask('github', function() {
+        grunt.task.run(['shell:github']);
+    });
+
+    grunt.registerTask('pr', function() {
+        grunt.task.run(['lint','shell:clean', 'shell:push', 'shell:pullrequest']);
+    });
+
+    grunt.registerTask('meet', function() {
+        grunt.task.run(['open:meeting']);
+    });
+
+    grunt.registerTask('trim', function() {
+        grunt.task.run(['shell:trim']);
+    });
 };

@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
     'use strict';
     var libraryModule = require('./_module');
-    module.exports = libraryModule.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',function($stateProvider, $urlRouterProvider, $locationProvider) {
+    module.exports = libraryModule.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 
         // Now set up the states

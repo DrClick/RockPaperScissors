@@ -1,6 +1,14 @@
 module.exports = {
-  src: ['<%= config.app %>/src/**/**.js','<%= config.server %>/**.js', 'Gruntfile.js'],
-  options: {
-    config: '.jscsrc'
-  }
+    app: {
+        src: ['<%= config.app %>/src/**/**.js', 'Gruntfile.js'],
+        options: {
+            config: '.jscsrc'
+        }
+    },
+    server: {
+        src: ['<%= config.server %>/**.js', 'Gruntfile.js'],
+        options: {
+            config: 'server/.jscsrc'
+        }
+    }
 };
