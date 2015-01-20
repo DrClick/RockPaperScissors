@@ -7,15 +7,12 @@ define(function(require, exports, module) {
     //bind this controller to the module
     mod.controller('HomeController', Controller);
 
-    function Controller($scope, $state) {
-        //mixins the controller into scope,
-        //dont mess with this
-        _.extend($scope, Object.getPrototypeOf(this));
-        _create.call($scope, {state: $state});
-        _init.call($scope);
+    function Controller($state) {
+        _create.call(this, {state: $state});
+        _init.call(this);
     }
 
-    Controller.$inject = ['$scope', '$state'];
+    Controller.$inject = ['$state'];
 
     function _create(services) {
         //set up all the properties here
@@ -25,9 +22,9 @@ define(function(require, exports, module) {
 
     function _init() {
         //this is where you put code to initialize things, for instance make call to services to get data or something of that nature
-        this.services.state.go('home');
     }
 
+    //example of exposing a method
     Controller.prototype.message = function() {
         return this.rawMessage;
     };

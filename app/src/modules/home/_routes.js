@@ -10,7 +10,8 @@ define(function(require, exports, module) {
             views: {
                 'main': {
                     templateUrl: '../src/modules/home/home.template.html',
-                    controller: 'HomeController'
+                    controller: 'HomeController',
+                    controllerAs: 'home'
                 }
             }
         });
