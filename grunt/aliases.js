@@ -6,7 +6,6 @@ module.exports = function (grunt) {
             'clean:server',
             'processhtml:dev',
             'sass:dev',
-            'forever:dev',
             'open:dev',
             'open:inspector',
             'parallel:dev'

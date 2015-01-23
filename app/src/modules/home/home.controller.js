@@ -18,6 +18,10 @@ define(function(require, exports, module) {
         //set up all the properties here
         this.services = services;
         this.rawMessage = 'Welcome to Lumiata Angular Seed';
+        this.scores = {
+            playerA: 0,
+            playerB: 0
+        };
     }
 
     function _init() {

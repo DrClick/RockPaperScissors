@@ -25,7 +25,6 @@
     "grunt-contrib-uglify": "^0.7.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express-server": "^0.4.19",
-    "grunt-forever": "git://github.com/lumiata/grunt-forever.git#master",
     "grunt-jscs-checker": "^0.8.1",
     "grunt-node-inspector": "^0.1.5",
     "grunt-open": "^0.2.3",

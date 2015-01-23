@@ -4,6 +4,7 @@ define(function(require, exports, module) {
 
     //application module files
     require('./modules/home/_index');
+    require('./services/_index');
 
 
     //angular dependencies
@@ -26,6 +27,7 @@ define(function(require, exports, module) {
         'famous.angular',
 
         //application modules
+        'app.services',
         'app.home'
     ]);
 

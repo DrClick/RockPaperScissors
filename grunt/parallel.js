@@ -1,8 +1,9 @@
 module.exports={
     dev: {
         options: {
-            grunt: true
+            grunt: true,
+            stream: true
         },
-        tasks: ['node-inspector', 'watch']
+        tasks: ['shell:forever', 'node-inspector', 'watch']
     }
 };
